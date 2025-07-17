@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Box, Typography, Paper, useTheme, useMediaQuery } from '@mui/material';
+import { Container, Box, Typography, useTheme, useMediaQuery } from '@mui/material';
 import TaskForm from './TaskForm';
 import TaskList from './TaskList';
 import { useTasks } from '../hooks/useTasks';

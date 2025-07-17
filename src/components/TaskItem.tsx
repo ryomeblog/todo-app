@@ -8,8 +8,7 @@ import {
   Checkbox, 
   Typography,
   useTheme,
-  useMediaQuery,
-  Box
+  useMediaQuery
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Task } from '../types/Task';
@@ -52,13 +51,6 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) => {
     day: 'numeric',
   });
 
-  // モバイル向けのタッチ領域を広げるための関数
-  const handleTaskClick = () => {
-    if (isMobile) {
-      onToggle(task.id);
-    }
-  };
-
   return (
     <ListItem
       divider
@@ -75,8 +67,6 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) => {
           bgcolor: 'action.selected',
         } : {},
       }}
-      // モバイルでは項目全体をクリック可能に（オプション）
-      // onClick={handleTaskClick}
     >
       {/* 完了状態のチェックボックス */}
       <ListItemIcon>
